@@ -1,13 +1,3 @@
-#Create a Parent Class for the account holder
-#Stores user details
-#function which calls the information in the class, eg account holder
-
-#Create a child class for the bank
-#Holds info about account balances
-#functions which allow to withdraw, deposit, view balance
-
-
-
 """
 Create Parent class for User
 """
@@ -23,6 +13,31 @@ class user():
         print('Age: ', self.age)
         print('Gender: ', self.gender)
 
+class bank(user):
+    total_deposits = 0
+    total_withdrawals = 0
 
 
+    def __init__(self, name, age, gender, balance):
+        super().__init__(name, age, gender)
+        self.balance = balance
+    
+    def show_info(self):
+        return f'User: {self.name}, has a remaining balance of {self.balance}'
+        
+    def deposit(self):
+        dep = float(input(f'{self.name.title}, please enter amount to deposit'))    
+        print('Thanks for your deposit')
+        self.balance += dep
+        self.total_deposits +=1
+        return f'Your new balance is {self.balance}'
+
+    def withdraw(self):
+        wdraw = float(input(f'{self.name.title}, please enter amount to withdraw'))
+        if self.balance < wdraw:
+            return f'You do not have sufficient funds'   
+        else:
+            print('Thank you. Withdrawal processing...')     
+        self.balance -= wdraw
+        self.total_withdrawals += 1 
 
