@@ -58,13 +58,13 @@ def options(user_two):  #Passing user two to see if it contains any info
         elif option_choice == 2:
             print(user_one_bank.withdraw())    #Activates withdraw method if one user present
             if option_choice == 2 and user_two != None:   
-                wdraw = input(f'{user_two.name} Would you like to make a withdrawal? Yes or no?')
+                wdraw = input(f'{user_two.name} Would you like to make a withdrawal? Yes or no?\n')
                 if wdraw.lower() == "yes":
                     print(user_two_bank.withdraw())   #Activates withdraw method if two users data is present
         elif option_choice == 3:
             print(user_one_bank.deposit())  #Activates Deposit method for user ones bank 
             if option_choice == 3 and user_two != None:
-                dep = input(f'{user_two.name} Would you like to make a deposit? Yes or No ')
+                dep = input(f'{user_two.name} Would you like to make a deposit? Yes or No\n ')
                 if dep.lower() == 'yes':
                     print(user_two_bank.deposit())
         elif option_choice == 4:
@@ -86,19 +86,19 @@ def options(user_two):  #Passing user two to see if it contains any info
 Create bank function which will populate the data of the user object when an option is chosen
 """
 def create_bank(name):
-    balance = float(input(f'{name.title()}, how much money do you have to open account with? '))    #passes in name and logs input as balance 
+    balance = float(input(f'{name.title()}, how much money do you have to open account with?\n '))    #passes in name and logs input as balance 
     return balance
 
 while True:              #Start calling from this while loop when program runs
     print('Welcome to EA bank!! Please proceed to open a new account')    
-    name = input('Enter your name: ')
-    age = int(input('Enter your age: '))
+    name = input('Enter your name:\n ')
+    age = int(input('Enter your age:\n '))
     user_one = user(name, age)
     user_two = None
-    new_user = input('Would you like to add another user? Type No to continue creating your account. ')
+    new_user = input('Would you like to add another user? Type No to continue creating your account.\n ')
     if new_user.lower() == 'yes':
-        name = input('Enter the second users name: ')
-        age = int(input('Enter the second users age: '))
+        name = input('Enter the second users name:\n ')
+        age = int(input('Enter the second users age:\n '))
         user_two = user(name, age)        #reassign to user 2
         print('Thank you for registering two users. Please create your accounts. ')
 
