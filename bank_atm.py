@@ -73,25 +73,22 @@ def options(user_two):  #Passing user two to see if it contains any info
             elif option_choice == 5:
                 print(f'There have been {user_one_bank.total_deposits} deposits. ')
                 if option_choice == 5 and user_two != None:
-                    print(f'Theres have been {user_two_bank.total_deposits} deposits. ')                        
-
-                         
-
-
-
-
-
-
-
-
+                    print(f'Theres have been {user_two_bank.total_deposits} deposits. ')    
+            elif option_choice == 6:
+                print("Thank you for using EA bank. ")
+                return False
+                break
+            else:
+                print("Please choose a number from 1-6. ")                            
+                    
 """
 Create bank function which will populate the data of the user object when an option is chosen
 """
 def create_bank(name):
-    balance = float(input(f'{name.title()}, how much money do you have to open account with? '))
+    balance = float(input(f'{name.name.title()}, how much money do you have to open account with? '))    #passes in name and logs input as balance 
     return balance
 
-while True:    
+while True:              #Start calling from this while loop when program runs
     print('Welcome to EA bank!! Please proceed to open a new account')    
     name = input('Enter your name: ')
     age = int(input('Enter your age: '))
@@ -109,5 +106,6 @@ while True:
 
         user_one_bank = bank(user_one.name, user_one.age, user_one_balance) # Creates user bank and passes the gathered balance information and users info from parent and child classes
         user_two_bank = bank(user_two.name, user_two.age, user_two_balance)
+     
 
        
