@@ -56,9 +56,18 @@ def options(user_two):  #Passing user two to see if it contains any info
             elif option_choice == 2:
                 print(user_one_bank.withdraws())    #Activates withdraw method if one user present
                 if option_choice == 2 and user_two != None:   
-                    wdraw = input(f'{user_two.name} Would you like to make a withdrawal? Yes or no?'
-                    if wd.lower() == 'yes':
+                    wdraw = input(f'{user_two.name} Would you like to make a withdrawal? Yes or no?')
+                    if wdraw.lower() == "yes":
                         print(user_two_bank.withdraw())   #Activates withdraw method if two users data is present
+            elif option_choice == 3:
+                print(user_one_bank.deposit())  #Activates Deposit method for user ones bank 
+                if option_choice == 3 and user_two != None:
+                    dep = input(f'{user_two.name} Would you like to make a deposit? Yes or No ')
+                    if dep.lower() == 'yes':
+                        print(user_two_bank.deposit)
+                         
+
+
 
 
 
@@ -73,9 +82,9 @@ def create_bank(name):
     return balance
 
 while True:    
-    print('Welcome to EA bank')    
-    name = input('Enter your name')
-    age = int(input('Enter your age'))
+    print('Welcome to EA bank!! Please proceed to open a new account')    
+    name = input('Enter your name: ')
+    age = int(input('Enter your age: '))
     user_one = user(name, age)
     user_two = None
     new_user = input('Would you like to add another user? Type No to continue creating your account. ')
