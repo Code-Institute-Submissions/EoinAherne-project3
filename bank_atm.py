@@ -10,7 +10,9 @@ class user():
         print('User Details: ')
         print('Name: ', self.name)
         print('Age: ', self.age)
-        
+"""
+Create a child class for the bank, to inherit attributes from the parent class
+"""        
 class bank(user):
     total_deposits = 0
     total_withdrawals = 0
@@ -44,7 +46,7 @@ class bank(user):
 Create bank function which will populate the data of the user object
 """
 def create_bank(name):
-    balance = float(input(f'{name.name.title()}, how much money do you have to open account with? '))
+    balance = float(input(f'{name.title()}, how much money do you have to open account with? '))
     return balance
 
 while True:    
@@ -60,3 +62,10 @@ while True:
         user_two = user(name, age)
         print('Thank you for registering two users. Please create your accounts. ')
         
+        user_one_balance = create_bank(user_one.name)  #Creates user one balance by passing users name into bank creation
+        user_two_balance = create_bank(user_two.name)
+
+        user_one_bank = bank(user_one.name, user_one.age, user_one_balance) # Creates user bank and passes the gathered balance information and users info from parent and child classes
+        user_two_bank = bank(user_two.name, user_two.age, user_two_balance)
+
+       
