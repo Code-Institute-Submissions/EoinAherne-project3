@@ -14,33 +14,34 @@ class user():
 Create a child class for the bank, to inherit attributes from the parent class
 """        
 class bank(user):
-    total_deposits = 0
+    total_deposits = 0    #declare variables and set to 0 to call later
     total_withdrawals = 0
 
 
     def __init__(self, name, age, balance):
-        super().__init__(name, age)
+        super().__init__(name, age)          #inherited from parent class  
         self.balance = balance
     
-    def show_info(self):
+    def show_info(self):         #Function to show balance on account
         return f'User: {self.name}, has a remaining balance of {self.balance}'
         
-    def deposit(self):
+    def deposit(self):           #Function to create deposit  
         dep = float(input(f'{self.name.title}, please enter amount to deposit'))    
         print('Thanks for your deposit')
-        self.balance += dep
-        self.total_deposits +=1
+        self.balance += dep      #Adds deposit to balance 
+        self.total_deposits +=1          #Iterates variable each time function is called
         return f'Your new balance is {self.balance}'
 
-    def withdraw(self):
+    def withdraw(self):          #Function to create withdrawal
         wdraw = float(input(f'{self.name.title}, please enter amount to withdraw'))
-        if self.balance < wdraw:
+        if self.balance < wdraw:     
             return f'You do not have sufficient funds'   
         else:
             print('Thank you. Withdrawal processing...')     
         self.balance -= wdraw
-        self.total_withdrawals += 1 
+        self.total_withdrawals += 1       #Iterates variable each time function is called
 
+        
 """
 A function which gives the user a list of options to use
 """
@@ -64,7 +65,16 @@ def options(user_two):  #Passing user two to see if it contains any info
                 if option_choice == 3 and user_two != None:
                     dep = input(f'{user_two.name} Would you like to make a deposit? Yes or No ')
                     if dep.lower() == 'yes':
-                        print(user_two_bank.deposit)
+                        print(user_two_bank.deposit())
+            elif option_choice == 4:
+                print(f'There have been {user_one_bank.total_withdrawals} withdrawals. ')
+                if option_choice == 4 and user_two != None:
+                    print(f'There have been {user_two_bank.total_withdrawals} withdrawals. ')
+            elif option_choice == 5:
+                print(f'There have been {user_one_bank.total_deposits} deposits. ')
+                if option_choice == 5 and user_two != None:
+                    print(f'Theres have been {user_two_bank.total_deposits} deposits. ')                        
+
                          
 
 
