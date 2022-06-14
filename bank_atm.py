@@ -41,9 +41,18 @@ class bank(user):
         self.balance -= wdraw
         self.total_withdrawals += 1 
 
+"""
+A function which gives the user a list of options to use
+"""
+def options(user_two):
+    print('Thank you for opening a bank account with us')
+    print('Please type the number of the option you would like to pick')
+    while True:|
+
+
 
 """
-Create bank function which will populate the data of the user object
+Create bank function which will populate the data of the user object when an option is chosen
 """
 def create_bank(name):
     balance = float(input(f'{name.title()}, how much money do you have to open account with? '))
