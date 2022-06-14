@@ -44,10 +44,24 @@ class bank(user):
 """
 A function which gives the user a list of options to use
 """
-def options(user_two):
+def options(user_two):  #Passing user two to see if it contains any info
     print('Thank you for opening a bank account with us')
     print('Please type the number of the option you would like to pick')
-    while True:|
+    while True:
+        option_choice = int(input("1) |Display Balance\n2) Make Withdrawal\n3 Deposit\n4) See total withdrawals\n5 See total deposits\n6 Quit\n"))
+        if option_choice == 1:
+            print(user_one_bank.show_info())   #Get user ones bank data when option 1 is chosen
+            if option_choice == 1 and user_two != None:    
+                print(user_two_bank.show_info())
+            elif option_choice == 2:
+                print(user_one_bank.withdraws())    #Activates withdraw method if one user present
+                if option_choice == 2 and user_two != None:   
+                    wdraw = input(f'{user_two.name} Would you like to make a withdrawal? Yes or no?'
+                    if wd.lower() == 'yes':
+                        print(user_two_bank.withdraw())   #Activates withdraw method if two users data is present
+
+
+
 
 
 
