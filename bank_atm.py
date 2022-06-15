@@ -26,14 +26,14 @@ class bank(user):
         return f'User: {self.name}, has a remaining balance of {self.balance}'
         
     def deposit(self):           #Function to create deposit  
-        dep = float(input(f'{self.name.title}, please enter amount to deposit: '))    
+        dep = float(input(f'{self.name.title()}, please enter amount to deposit: '))    
         print('Thanks for your deposit')
         self.balance += dep      #Adds deposit to balance 
         self.total_deposits +=1          #Iterates variable each time function is called
         return f'Your new balance is {self.balance}'
 
     def withdraw(self):          #Function to create withdrawal
-        wdraw = float(input(f'{self.name.title}, please enter amount to withdraw: '))
+        wdraw = float(input(f'{self.name.title()}, please enter amount to withdraw: '))
         if self.balance < wdraw:     
             return f'You do not have sufficient funds'   
         else:
