@@ -1,1 +1,1 @@
-web: gunicorn bank_atm.py
+web: node index.js
