@@ -1,5 +1,6 @@
 """
 Create Parent class for User
+Use initialiser to create object of user, taking name and age attributes  
 """
 class user():
     def __init__(self, name, age,):
@@ -46,34 +47,34 @@ class bank(user):
 """
 A function which gives the user a list of options to use
 """
-def options(user_two):  #Passing user two to see if it contains any info
+def option(user_two):  #Passing user two to see if it contains any info
     print('Thank you for opening a bank account with us')
     print('Please type the number of the option you would like to pick')
     while True:
         option_choice = int(input("1) Display Balance\n2) Make Withdrawal\n3) Deposit\n4) See total withdrawals\n5 See total deposits\n6 Quit\n"))
         if option_choice == 1:
             print(user_one_bank.show_info())   #Get user ones bank data when option 1 is chosen
-            if option_choice == 1 and user_two != None:    
+            if option_choice == 1 and user_two is not None:    
                 print(user_two_bank.show_info())
         elif option_choice == 2:
             print(user_one_bank.withdraw())    #Activates withdraw method if one user present
-            if option_choice == 2 and user_two != None:   
+            if option_choice == 2 and user_two is not None:   
                 wdraw = input(f'{user_two.name} Would you like to make a withdrawal? Yes or no?\n')
                 if wdraw.lower() == "yes":
                     print(user_two_bank.withdraw())   #Activates withdraw method if two users data is present
         elif option_choice == 3:
             print(user_one_bank.deposit())  #Activates Deposit method for user ones bank 
-            if option_choice == 3 and user_two != None:
+            if option_choice == 3 and user_two is not None:
                 dep = input(f'{user_two.name} Would you like to make a deposit? Yes or No\n ')
                 if dep.lower() == 'yes':
                     print(user_two_bank.deposit())
         elif option_choice == 4:
             print(f'There have been {user_one_bank.total_withdrawals} withdrawals. ')
-            if option_choice == 4 and user_two != None:
+            if option_choice == 4 and user_two is not None:
                 print(f'There have been {user_two_bank.total_withdrawals} withdrawals. ')
         elif option_choice == 5:
             print(f'There have been {user_one_bank.total_deposits} deposits. ')
-            if option_choice == 5 and user_two != None:
+            if option_choice == 5 and user_two is not None:
                 print(f'Theres have been {user_two_bank.total_deposits} deposits. ')    
         elif option_choice == 6:
             print("Thank you for using EA bank. ")
@@ -106,13 +107,13 @@ while True:              #Start calling from this while loop when program runs
         user_two_balance = create_bank(user_two.name)  
         user_one_bank = bank(user_one.name, user_one.age, user_one_balance) # Creates user bank and passes the gathered balance information and users info from parent and child classes
         user_two_bank = bank(user_two.name, user_two.age, user_two_balance)
-        marker = options(user_two)
+        marker = option(user_two)
         if marker == False:
             break
     else: 
         user_one_balance = create_bank(user_one.name)
         user_one_bank = bank(user_one.name, user_one.age, user_one_balance)
-        marker = options(user_two)
+        marker = option(user_two)
         if marker == False:
             break
 
