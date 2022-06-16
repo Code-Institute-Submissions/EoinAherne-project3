@@ -1,31 +1,56 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome EoinAherne,
+# Banking App  
+ 
+The purpose of this app is to allow users to set up a bank account. The account will have optional features such as deposit, withdraw and display balance.  
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+[The link to the deployed app can be found here](https://eoins-atm.herokuapp.com/)
 
-## Reminders
+## How to use
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+- One started the user will be asked to input their name and age to the terminal.
 
-## Creating the Heroku app
+![Banking_app](gallery/mkdwn_img1.png)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+  - The user then has an option to add a second user account.
+ - Upon entering personal user information the users will be asked to input an amount to open account with
+ - The user is then met with a list of options which they can choose from
+ - Each chosen option will lead to the user being asked to input information and it will return the updated users bank information
+ - Once the user is finished with their transactions, they have the option to quit which closes the program and leaves a message
 
-1. `heroku/python`
-2. `heroku/nodejs`
+![Banking_app_2](gallery/mkdwn_img2.png)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Features
+ - The app allows a user to set up another account for a second user when it begins.  
+ ![Opening_two_accounts](gallery/mkdwn_img3.png)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+ - The app has deposit and withdrawal features, as well as a log for total withdrawals and deposits
+ ![Deposit_function](gallery/mkdwn_img4.png) 
+----
+## Future Features
+- An option to open either a current or savings account with different options available in each menu.
 
-Connect your GitHub repository and deploy as normal.
+----
+## Technologies Used
+- Python
+- Heroku
+----
+## Testing
 
-## Constraints
+----
+## Accessibility
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+----
+## Bugs & Issues 
 
------
-Happy coding!
+
+----
+## Validator Testing
+
+ - The deployment terminal is set to 80 columns by 24 rows.
+ \n write under here
+----
+## Deployment
+
+----
+## Credits
