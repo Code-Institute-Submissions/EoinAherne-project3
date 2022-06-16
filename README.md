@@ -8,11 +8,11 @@ The purpose of this app is to allow users to set up a bank account. The account 
 
 ## How to use
 
-- One started the user will be asked to input their name and age to the terminal.
+- Once started the user will be asked to input their name and age to the terminal.
 
 ![Banking_app](gallery/mkdwn_img1.png)
 
-  - The user then has an option to add a second user account.
+ - The user then has an option to add a second user account.
  - Upon entering personal user information the users will be asked to input an amount to open account with
  - The user is then met with a list of options which they can choose from
  - Each chosen option will lead to the user being asked to input information and it will return the updated users bank information
@@ -36,21 +36,26 @@ The purpose of this app is to allow users to set up a bank account. The account 
 - Heroku
 ----
 ## Testing
+- I tested my code in the python terminal and commited my code after building each new class or functions, as well as after debugging and deployment
+- I deployed my site and used the terminal on Heroku to manually enter data and see how it responded
+- I asked my family and a couple of friends to try out the app and see if there was any issues foe them. It seemed to function without error or crashing    
 
 ----
 ## Accessibility
+- I did not address accessibility with this project as it was made for a Command Line Interface.
+- I did not use any HTML, CSS or use any images on this site
 
 ----
-## Bugs & Issues 
-
+## Bugs & Issues  
+- Unresolved Issue   <br>  
+The deployment terminal is set to 80 columns by 24 row. My code often exceeds 80 columns. This however does not effect the programs ability to run, as the output to the Heroku terminal never exceed 80 columns. These errors only appear on lines where there are comments. If i put the comments on the line below or above each time the code would be very difficult to read. 
 
 ----
 ## Validator Testing
-
- - The deployment terminal is set to 80 columns by 24 rows.
- \n write under here
+- Validation testing was done with [Pep 8 Online](http://pep8online.com/)
 ----
 ## Deployment
+- I had some trouble with initial deployment attempts on this project. I had accidentaly deleted my packages.json folder when i started as i did not know it was needed when deploying a project that contains just a Python file. After a couple of hours with excellent tutor support we resolved the issue and the site deployed without any problems  
 
 ----
 ## Credits
