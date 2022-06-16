@@ -55,7 +55,10 @@ The deployment terminal is set to 80 columns by 24 row. My code often exceeds 80
 - Validation testing was done with [Pep 8 Online](http://pep8online.com/)
 ----
 ## Deployment
-- I had some trouble with initial deployment attempts on this project. I had accidentaly deleted my packages.json folder when i started as i did not know it was needed when deploying a project that contains just a Python file. After a couple of hours with excellent tutor support we resolved the issue and the site deployed without any problems  
+- I had some trouble with initial deployment attempts on this project. I had accidentaly deleted my packages.json folder when i started as i did not know it was needed when deploying a project that contains just a Python file. After some troubleshooting with excellent tutor support, I resolved the issue and the site deployed without any problems.   
 
 ----
 ## Credits
+
+- Help with the concept of using Parent and Child classes to create a bank app [Bank Classes](https://youtu.be/xTh-ln2XhgU)   
+- Thanks to Tutor support for all the help deploying to Heroku 
